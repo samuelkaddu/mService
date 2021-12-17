@@ -33,10 +33,8 @@ public class MailHandler {
 
     @JmsListener(destination = "sendMail", containerFactory = "busFactory")
     public void receiveMessage(Message emailMessage) {
-        logger.loggingService().info(emailMessage);
         sendEmail(emailMessage);
     }
-
 
     public void sendEmail(Message content) {
         try {
