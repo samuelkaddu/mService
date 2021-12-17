@@ -34,8 +34,6 @@ public class MessageRepositoryImpl implements MessageRepository {
                     .append(" where id > ")
                     .append(lastMessageId)
                     .append(" order by id asc").toString();
-
-            jdbcTemplate.setMaxRows(config.getMaxRows());
             List<Map<String, Object>> results = jdbcTemplate.queryForList(query);
             return results;
         } catch (Exception e) {

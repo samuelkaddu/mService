@@ -62,7 +62,6 @@ public class MessageGenerator {
                     logLastMessageId(smsTracker, String.valueOf(tran.get("id")));
                 }
             }
-            //    trans.clear();
         }
     }
 

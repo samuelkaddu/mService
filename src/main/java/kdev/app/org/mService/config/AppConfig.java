@@ -15,6 +15,5 @@ public class AppConfig {
     private String sendSms;
     private String sendEmail;
     private String retrySending;
-    private int maxRows;
 
 }
