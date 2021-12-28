@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -49,6 +50,24 @@ public class MessageRepositoryImpl implements MessageRepository {
             Long lastMessageId = getLastMessageId(filename);
             String query = new StringBuilder("select * from ")
                     .append(config.getLoanQuery())
+                    .append(" where id > ")
+                    .append(lastMessageId)
+                    .append(" order by id asc").toString();
+            List<Map<String, Object>> results = jdbcTemplate.queryForList(query);
+
+            return results;
+        } catch (Exception e) {
+            logger.loggingService().error(e);
+            return Arrays.asList();
+        }
+    }
+
+
+    public List<Map<String, Object>> getDueLoanMessages(String filename) {
+        try {
+            Long lastMessageId = getLastMessageId(filename);
+            String query = new StringBuilder("select * from ")
+                    .append(config.getDueQuery())
                     .append(" where id > ")
                     .append(lastMessageId)
                     .append(" order by id asc").toString();
