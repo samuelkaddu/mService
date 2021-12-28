@@ -11,6 +11,7 @@ public class Message {
     private String message;
     private String address;
     private String t_name;
+    private String subject;
     private Long id;
     private boolean isRetry;
 }

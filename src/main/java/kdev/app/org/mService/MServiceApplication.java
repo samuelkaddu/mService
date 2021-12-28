@@ -1,5 +1,6 @@
 package kdev.app.org.mService;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import kdev.app.org.mService.receivers.JMSErrorHandler;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +20,7 @@ import javax.jms.ConnectionFactory;
 import java.io.*;
 
 @SpringBootApplication
+@EnableEncryptableProperties
 @EnableScheduling
 @EnableJms
 public class MServiceApplication implements CommandLineRunner {

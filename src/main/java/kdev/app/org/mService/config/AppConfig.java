@@ -12,9 +12,10 @@ public class AppConfig {
     private String enableLogging;
     private String tranQuery;
     private String loanQuery;
+    private String dueQuery;
     private String sendSms;
     private String sendEmail;
     private String retrySending;
-    private int maxRows;
+
 
 }

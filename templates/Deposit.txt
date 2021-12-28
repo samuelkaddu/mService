@@ -1,1 +1,0 @@
-A deposit of amount {amt} has been made on account number {acct_no} on {tran_date}

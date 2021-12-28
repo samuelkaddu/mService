@@ -19,8 +19,10 @@ public class MessageGenerator {
     private final JmsTemplate jmsTemplate;
     private final LoggingConfig logger;
     private final AppConfig config;
-    private final String mailTracker = "mailTracker.txt";
+    private final String tranTracker = "tranTracker.txt";
     private final String smsTracker = "smsTracker.txt";
+    private final String loanTracker = "loanTracker.txt";
+    private final String dueTracker = "dueTracker.txt";
 
     public MessageGenerator(MessageRepositoryImpl repository, MailHandler mailHandler, JmsTemplate jmsTemplate, LoggingConfig logger, AppConfig config) {
         this.repository = repository;
@@ -30,11 +32,13 @@ public class MessageGenerator {
     }
 
     @Scheduled(fixedDelay = 2000, initialDelay = 2000)
-    private void sendMail() {
+    private void sendTransactionalAlerts() {
         if ("Y".equalsIgnoreCase(config.getSendEmail())) {
             String[] templates = getTemplateFiles(".html");
             for (String template : templates) {
-                List<Map<String, Object>> trans = repository.getTransactionalMessages(mailTracker);
+                if ("L".equalsIgnoreCase(template.substring(0, 1)))
+                    continue;
+                List<Map<String, Object>> trans = repository.getTransactionalMessages(tranTracker);
                 String content = getTemplate(template);
                 for (Map<String, Object> tran : trans) {
                     jmsTemplate.convertAndSend("sendMail",
@@ -42,12 +46,40 @@ public class MessageGenerator {
                                     .message(extractMsgFromTemplate(tran, content))
                                     .address(String.valueOf(tran.get("email_addr_1")))
                                     .id(Long.valueOf(tran.get("id").toString()))
-                                    .isRetry(false).t_name(template).build());
-                    logLastMessageId(mailTracker, String.valueOf(tran.get("id")));
+                                    .isRetry(false).t_name(template)
+                                    .subject("Loan Repayment Confirmation")
+                                    .build());
+                    logLastMessageId(tranTracker, String.valueOf(tran.get("id")));
                 }
             }
         }
     }
+
+
+    @Scheduled(cron = "0 * * ? * *")
+    private void sendLoanAlerts() {
+        if ("Y".equalsIgnoreCase(config.getSendEmail())) {
+            String[] templates = getTemplateFiles(".html");
+            for (String template : templates) {
+                if ("T".equalsIgnoreCase(template.substring(0, 1)))
+                    continue;
+                List<Map<String, Object>> trans = template.contains("Due") ? repository.getDueLoanMessages(dueTracker) : repository.getLoanMessages(loanTracker);
+                String content = getTemplate(template);
+                for (Map<String, Object> tran : trans) {
+                    jmsTemplate.convertAndSend("sendMail",
+                            Message.builder()
+                                    .message(extractMsgFromTemplate(tran, content))
+                                    .address(String.valueOf(tran.get("email_addr_1")))
+                                    .id(Long.valueOf(tran.get("id").toString()))
+                                    .isRetry(false).t_name(template)
+                                    .subject("Loan Repayment Reminder")
+                                    .build());
+                    logLastMessageId(template.contains("Due") ? dueTracker : loanTracker, String.valueOf(tran.get("id")));
+                }
+            }
+        }
+    }
+
 
     @Scheduled(fixedDelay = 2000, initialDelay = 2000)
     private void sendSms() {
@@ -62,12 +94,11 @@ public class MessageGenerator {
                     logLastMessageId(smsTracker, String.valueOf(tran.get("id")));
                 }
             }
-            //    trans.clear();
         }
     }
 
 
-    @Scheduled(fixedDelay = 2000, initialDelay = 2000)
+    @Scheduled(fixedDelay = 50000, initialDelay = 50000)
     private void retryFailedMail() {
         if ("Y".equalsIgnoreCase(config.getRetrySending())) {
             List<Map<String, Object>> trans = repository.getFailedMessages();
@@ -81,7 +112,7 @@ public class MessageGenerator {
                                 .isRetry(true)
                                 .t_name(String.valueOf(tran.get("t_name")))
                                 .build());
-                logLastMessageId(mailTracker, String.valueOf(tran.get("id")));
+                logLastMessageId(tranTracker, String.valueOf(tran.get("id")));
             }
         }
     }
