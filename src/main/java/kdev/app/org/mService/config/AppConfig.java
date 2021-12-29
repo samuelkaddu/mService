@@ -16,6 +16,7 @@ public class AppConfig {
     private String sendSms;
     private String sendEmail;
     private String retrySending;
+    private String cc_emails;
 
 
 }
