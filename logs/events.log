@@ -1410,3 +1410,199 @@
 <log realm="mService" at="Tue Dec 28 22:42:08 EAT 2021.806">
      <info>Sent email to {} samuelkaddu78@gmail.com</info>
 </log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:06:10 EAT 2021.478">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:11:14 EAT 2021.924">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:13:07 EAT 2021.826">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:16:08 EAT 2021.820">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:18:09 EAT 2021.55">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:20:16 EAT 2021.65">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:21:09 EAT 2021.165">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:22:07 EAT 2021.460">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:23:08 EAT 2021.220">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:25:08 EAT 2021.56">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:27:09 EAT 2021.50">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:29:11 EAT 2021.186">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:31:06 EAT 2021.216">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:33:07 EAT 2021.756">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:36:08 EAT 2021.807">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:37:09 EAT 2021.590">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:39:07 EAT 2021.149">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:41:07 EAT 2021.41">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:46:09 EAT 2021.189">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:49:07 EAT 2021.591">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:52:09 EAT 2021.597">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:54:08 EAT 2021.149">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 15:56:10 EAT 2021.335">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 22:01:35 EAT 2021.697">
+     <error>
+          <class>AddressException</class>
+          <message>Domain contains illegal character</message>
+          <stacktrace>
+               at javax.mail.internet.InternetAddress.checkAddress(InternetAddress.java:1432)
+               at javax.mail.internet.InternetAddress.parse(InternetAddress.java:1215)
+               at javax.mail.internet.InternetAddress.parse(InternetAddress.java:752)
+               at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:119)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:60)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 22:08:46 EAT 2021.62">
+     <error>
+          <class>AddressException</class>
+          <message>Domain contains illegal character</message>
+          <stacktrace>
+               at javax.mail.internet.InternetAddress.checkAddress(InternetAddress.java:1432)
+               at javax.mail.internet.InternetAddress.parse(InternetAddress.java:1215)
+               at javax.mail.internet.InternetAddress.parse(InternetAddress.java:752)
+               at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:119)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:59)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Wed Dec 29 22:10:37 EAT 2021.143">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>

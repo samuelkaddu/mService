@@ -56,7 +56,7 @@ public class MessageGenerator {
     }
 
 
-    @Scheduled(cron = "0 * * ? * *")
+    @Scheduled(cron = "*/30 * * ? * *")
     private void sendLoanAlerts() {
         if ("Y".equalsIgnoreCase(config.getSendEmail())) {
             String[] templates = getTemplateFiles(".html");
