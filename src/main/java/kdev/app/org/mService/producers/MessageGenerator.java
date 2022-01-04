@@ -23,6 +23,7 @@ public class MessageGenerator {
     private final String smsTracker = "smsTracker.txt";
     private final String loanTracker = "loanTracker.txt";
     private final String dueTracker = "dueTracker.txt";
+    private final String arreasTracker = "arrearsTracker.txt";
 
     public MessageGenerator(MessageRepositoryImpl repository, MailHandler mailHandler, JmsTemplate jmsTemplate, LoggingConfig logger, AppConfig config) {
         this.repository = repository;
@@ -56,14 +57,16 @@ public class MessageGenerator {
     }
 
 
-    @Scheduled(cron = "*/30 * * ? * *")
+    @Scheduled(cron = "0 0 9 * * ?")
     private void sendLoanAlerts() {
         if ("Y".equalsIgnoreCase(config.getSendEmail())) {
+
             String[] templates = getTemplateFiles(".html");
             for (String template : templates) {
                 if ("T".equalsIgnoreCase(template.substring(0, 1)))
                     continue;
-                List<Map<String, Object>> trans = template.contains("Due") ? repository.getDueLoanMessages(dueTracker) : repository.getLoanMessages(loanTracker);
+                String tracker = template.contains("Due") ? dueTracker : template.contains("Arrears") ? arreasTracker : loanTracker;
+                List<Map<String, Object>> trans = template.contains("Due") ? repository.getDueLoanMessages(tracker) : template.contains("Arrears") ? repository.getLoanArrearsMessages(tracker) : repository.getLoanMessages(tracker);
                 String content = getTemplate(template);
                 for (Map<String, Object> tran : trans) {
                     jmsTemplate.convertAndSend("sendMail",
@@ -74,7 +77,7 @@ public class MessageGenerator {
                                     .isRetry(false).t_name(template)
                                     .subject("Loan Repayment Reminder")
                                     .build());
-                    logLastMessageId(template.contains("Due") ? dueTracker : loanTracker, String.valueOf(tran.get("id")));
+                    logLastMessageId(tracker, String.valueOf(tran.get("id")));
                 }
             }
         }

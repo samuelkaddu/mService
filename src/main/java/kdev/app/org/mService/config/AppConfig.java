@@ -13,6 +13,7 @@ public class AppConfig {
     private String tranQuery;
     private String loanQuery;
     private String dueQuery;
+    private String arrearsQuery;
     private String sendSms;
     private String sendEmail;
     private String retrySending;

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -81,6 +80,24 @@ public class MessageRepositoryImpl implements MessageRepository {
     }
 
     @Override
+    public List<Map<String, Object>> getLoanArrearsMessages(String filename) {
+        try {
+            Long lastMessageId = getLastMessageId(filename);
+            String query = new StringBuilder("select * from ")
+                    .append(config.getArrearsQuery())
+                    .append(" where id > ")
+                    .append(lastMessageId)
+                    .append(" order by id asc").toString();
+            List<Map<String, Object>> results = jdbcTemplate.queryForList(query);
+
+            return results;
+        } catch (Exception e) {
+            logger.loggingService().error(e);
+            return Arrays.asList();
+        }
+    }
+
+    @Override
     public List<Map<String, Object>> getFailedMessages() {
         List<Map<String, Object>> results = jdbcTemplate.queryForList("select * from v_failed_messages");
         return results;
@@ -105,7 +122,8 @@ public class MessageRepositoryImpl implements MessageRepository {
             }
             return Long.valueOf(id);
         } catch (IOException e) {
-            logger.loggingService().error(e);
+            if (!e.getMessage().contains("The system cannot find the file specified"))
+                logger.loggingService().error(e);
             return 0L;
         }
     }
