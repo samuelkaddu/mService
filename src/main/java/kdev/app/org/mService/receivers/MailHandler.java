@@ -56,10 +56,10 @@ public class MailHandler {
             MimeMessage mimemessage = mailSender.createMimeMessage();
             mimemessage.setFrom(new InternetAddress(mailProperties.getUsername()));
             for (String email : others) {
-                mimemessage.addRecipient(javax.mail.Message.RecipientType.BCC, new InternetAddress(email));
+                if (!"".equalsIgnoreCase(email))
+                    mimemessage.addRecipient(javax.mail.Message.RecipientType.BCC, new InternetAddress(email));
             }
             mimemessage.addRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(message.getAddress()));
-
             mimemessage.setSubject(message.getSubject());
             MimeMultipart multipart = new MimeMultipart("related");
             MimeBodyPart messageBodyPart = new MimeBodyPart();

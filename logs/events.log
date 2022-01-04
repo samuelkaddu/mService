@@ -1606,3 +1606,343 @@
 <log realm="mService" at="Wed Dec 29 22:10:37 EAT 2021.143">
      <info>Sent email to {} samuelkaddu78@gmail.com</info>
 </log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:30:37 EAT 2022.785">
+     <error>
+          <class>FileNotFoundException</class>
+          <message>tracker\arrearsTracker.txt (The system cannot find the file specified)</message>
+          <stacktrace>
+               at java.io.FileInputStream.open0(Native Method)
+               at java.io.FileInputStream.open(FileInputStream.java:195)
+               at java.io.FileInputStream.<init>(FileInputStream.java:138)
+               at java.io.FileInputStream.<init>(FileInputStream.java:93)
+               at java.io.FileReader.<init>(FileReader.java:58)
+               at kdev.app.org.mService.repository.MessageRepositoryImpl.getLastMessageId(MessageRepositoryImpl.java:101)
+               at kdev.app.org.mService.repository.MessageRepositoryImpl.getLoanMessages(MessageRepositoryImpl.java:50)
+               at kdev.app.org.mService.repository.MessageRepositoryImpl$$FastClassBySpringCGLIB$$bcd38398.invoke(<generated>)
+               at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+               at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+               at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+               at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+               at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+               at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+               at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+               at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+               at kdev.app.org.mService.repository.MessageRepositoryImpl$$EnhancerBySpringCGLIB$$7274e93f.getLoanMessages(<generated>)
+               at kdev.app.org.mService.producers.MessageGenerator.sendLoanAlerts(MessageGenerator.java:69)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+               at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+               at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+               at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+               at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+               at java.util.concurrent.FutureTask.run(FutureTask.java)
+               at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+               at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+               at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+               at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:37:32 EAT 2022.556">
+     <error>
+          <class>MailSendException</class>
+          <message>Failed messages: javax.mail.MessagingException: IOException while sending message;
+  nested exception is:
+	java.io.FileNotFoundException: D:\Deployments\templates\logo.jpeg (The system cannot find the file specified)</message>
+          <stacktrace>
+               at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:491)
+               at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361)
+               at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:79)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<log realm="mService" at="Tue Jan 04 22:37:32 EAT 2022.637">
+     <error>
+          <class>IllegalStateException</class>
+          <message>The Session is closed</message>
+          <stacktrace>
+               at org.apache.activemq.ActiveMQSession.checkClosed(ActiveMQSession.java:772)
+               at org.apache.activemq.ActiveMQSession.getTransacted(ActiveMQSession.java:541)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:401)
+               at com.sun.proxy.$Proxy92.getTransacted(Unknown Source)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.commitIfNecessary(AbstractMessageListenerContainer.java:772)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:680)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:39:25 EAT 2022.169">
+     <error>
+          <class>AddressException</class>
+          <message>Illegal address</message>
+          <stacktrace>
+               at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:122)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:59)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:41:17 EAT 2022.305" lifespan="1 ms">
+     <error>
+          <class>AddressException</class>
+          <message>Illegal address</message>
+          <stacktrace>
+               at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:122)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:59)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:42:51 EAT 2022.337">
+     <error>
+          <class>AddressException</class>
+          <message>Illegal address</message>
+          <stacktrace>
+               at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:122)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:59)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:43:35 EAT 2022.842">
+     <error>
+          <class>AddressException</class>
+          <message>Illegal address</message>
+          <stacktrace>
+               at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:122)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:60)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<log realm="mService" at="Tue Jan 04 22:43:35 EAT 2022.889">
+     <error>
+          <class>JMSException</class>
+          <message>Disposed due to prior exception</message>
+          <stacktrace>
+               at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:72)
+               at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1422)
+               at org.apache.activemq.TransactionContext.rollback(TransactionContext.java:284)
+               at org.apache.activemq.TransactionContext.commit(TransactionContext.java:311)
+               at org.apache.activemq.ActiveMQSession.commit(ActiveMQSession.java:583)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:401)
+               at com.sun.proxy.$Proxy92.commit(Unknown Source)
+               at org.springframework.jms.support.JmsUtils.commitIfNecessary(JmsUtils.java:218)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.commitIfNecessary(AbstractMessageListenerContainer.java:776)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:680)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:44:51 EAT 2022.531">
+     <error>
+          <class>MailSendException</class>
+          <message>Failed messages: javax.mail.MessagingException: IOException while sending message;
+  nested exception is:
+	java.io.FileNotFoundException: D:\Deployments\templates\logo.jpeg (The system cannot find the file specified)</message>
+          <stacktrace>
+               at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:491)
+               at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361)
+               at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:80)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:46:45 EAT 2022.192">
+     <error>
+          <class>MailSendException</class>
+          <message>Failed messages: javax.mail.MessagingException: IOException while sending message;
+  nested exception is:
+	java.io.FileNotFoundException: D:\Deployments\templates\logo.jpeg (The system cannot find the file specified)</message>
+          <stacktrace>
+               at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:491)
+               at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361)
+               at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356)
+               at kdev.app.org.mService.receivers.MailHandler.sendEmail(MailHandler.java:80)
+               at kdev.app.org.mService.receivers.MailHandler.receiveMessage(MailHandler.java:47)
+               at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+               at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+               at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+               at java.lang.reflect.Method.invoke(Method.java:498)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169)
+               at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:114)
+               at org.springframework.jms.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:77)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696)
+               at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:318)
+               at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:257)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227)
+               at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120)
+               at java.lang.Thread.run(Thread.java:748)
+          </stacktrace>
+     </error>
+</log>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="ug.ac.mak.java.logger.DailyLogListener">
+<log realm="mService" at="Tue Jan 04 22:51:08 EAT 2022.152">
+     <info>Sent email to {} samuelkaddu78@gmail.com</info>
+</log>

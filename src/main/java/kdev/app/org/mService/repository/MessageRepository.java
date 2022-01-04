@@ -10,6 +10,8 @@ public interface MessageRepository {
 
     List<Map<String, Object>> getFailedMessages();
 
+    List<Map<String, Object>> getLoanArrearsMessages(String filename);
+
     void logFailedAlerts(Long id, String t_name);
 
     void removeRecoveredAlerts(Long id);
