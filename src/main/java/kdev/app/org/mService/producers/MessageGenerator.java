@@ -20,6 +20,7 @@ public class MessageGenerator {
     private final LoggingConfig logger;
     private final AppConfig config;
     private final String tranTracker = "tranTracker.txt";
+    private final String tranTracker103 = "tranTracker103.txt";
     private final String smsTracker = "smsTracker.txt";
     private final String loanTracker = "loanTracker.txt";
     private final String dueTracker = "dueTracker.txt";
@@ -37,7 +38,7 @@ public class MessageGenerator {
         if ("Y".equalsIgnoreCase(config.getSendEmail())) {
             String[] templates = getTemplateFiles(".html");
             for (String template : templates) {
-                if ("L".equalsIgnoreCase(template.substring(0, 1)))
+                if ("L".equalsIgnoreCase(template.substring(0, 1)) || "tTransaction103.html".equals(template))
                     continue;
                 List<Map<String, Object>> trans = repository.getTransactionalMessages(tranTracker);
                 String content = getTemplate(template);
@@ -53,11 +54,27 @@ public class MessageGenerator {
                     logLastMessageId(tranTracker, String.valueOf(tran.get("id")));
                 }
             }
+
+            //newly added
+            List<Map<String, Object>> trans = repository.getTransactionalMessages103(tranTracker103);
+            String content = getTemplate("tTransaction103.html");
+            for (Map<String, Object> tran : trans) {
+                jmsTemplate.convertAndSend("sendMail",
+                        Message.builder()
+                                .message(extractMsgFromTemplate(tran, content))
+                                .address(String.valueOf(tran.get("email_addr_1")))
+                                .id(Long.valueOf(tran.get("id").toString()))
+                                .isRetry(false).t_name("")
+                                .subject("Loan Repayment Confirmation")
+                                .build());
+                logLastMessageId(tranTracker103, String.valueOf(tran.get("id")));
+            }
+
         }
     }
 
 
-    @Scheduled(cron = "0 0 9 * * ?")
+    @Scheduled(cron = "*/5 * * ? * *")
     private void sendLoanAlerts() {
         if ("Y".equalsIgnoreCase(config.getSendEmail())) {
 
@@ -66,7 +83,9 @@ public class MessageGenerator {
                 if ("T".equalsIgnoreCase(template.substring(0, 1)))
                     continue;
                 String tracker = template.contains("Due") ? dueTracker : template.contains("Arrears") ? arreasTracker : loanTracker;
-                List<Map<String, Object>> trans = template.contains("Due") ? repository.getDueLoanMessages(tracker) : template.contains("Arrears") ? repository.getLoanArrearsMessages(tracker) : repository.getLoanMessages(tracker);
+                List<Map<String, Object>> trans = template.contains("Due") ?
+                        repository.getDueLoanMessages(tracker) : template.contains("Arrears") ?
+                        repository.getLoanArrearsMessages(tracker) : repository.getLoanMessages(tracker);
                 String content = getTemplate(template);
                 for (Map<String, Object> tran : trans) {
                     jmsTemplate.convertAndSend("sendMail",
