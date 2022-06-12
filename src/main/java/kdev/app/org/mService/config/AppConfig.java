@@ -11,6 +11,7 @@ public class AppConfig {
     private String coreSchema;
     private String enableLogging;
     private String tranQuery;
+    private String tranQuery103;
     private String loanQuery;
     private String dueQuery;
     private String arrearsQuery;

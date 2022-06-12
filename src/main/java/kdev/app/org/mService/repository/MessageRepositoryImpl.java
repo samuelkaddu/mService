@@ -42,6 +42,24 @@ public class MessageRepositoryImpl implements MessageRepository {
             return Arrays.asList();
         }
     }
+    @Override
+    public List<Map<String, Object>> getTransactionalMessages103(String filename) {
+        try {
+            Long lastMessageId = getLastMessageId(filename);
+            String query = new StringBuilder("select * from ")
+                    .append(config.getTranQuery103())
+                    .append(" where id > ")
+                    .append(lastMessageId)
+                    .append(" order by id asc").toString();
+            List<Map<String, Object>> results = jdbcTemplate.queryForList(query);
+
+            return results;
+        } catch (Exception e) {
+            logger.loggingService().error(e);
+            return Arrays.asList();
+        }
+    }
+
 
     @Override
     public List<Map<String, Object>> getLoanMessages(String filename) {
